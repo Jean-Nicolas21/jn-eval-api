@@ -44,23 +44,23 @@ Une section par test en échec : renseignez ses quatre champs.
 
 ## testListingKitchenTicketsReturnsMine
 
-**Symptôme** :
+**Symptôme** : 
 
-**Cause** :
+**Cause** : 
 
-**Règle du module en jeu** :
+**Règle du module en jeu** : 
 
 **Correctif** :
 
 ## testListingKitchenTicketsWithoutTokenIsUnauthorized
 
-**Symptôme** :
+**Symptôme** : Le test attend une 401 sur l'accès aux tickets de cuisine mais l'api fournit une 200, ce qui suppose que l'api permet d'accéder aux tickets sans avoir de jeton.
 
-**Cause** :
+**Cause** : KitchenTicket:15(ApiOperation)
 
-**Règle du module en jeu** :
+**Règle du module en jeu** : Il n'y pas de security définit dans l'entity KitchenTicket, or cette route n'est accessible que l'on si on est connecté donc que si nous avons présenté un jeton.
 
-**Correctif** :
+**Correctif** : Il faut ajouter un parametre security dans l'opération avec comme spécification que l'on oblige à avoir un USER autorisé, donc avec jeton.
 
 ## testOpeningAnOrderIgnoresAnAbandonedOne
 
