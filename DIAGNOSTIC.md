@@ -34,13 +34,13 @@ Une section par test en échec : renseignez ses quatre champs.
 
 ## testAddingALineWithAZeroQuantityIsUnprocessable
 
-**Symptôme** : Attendu un
+**Symptôme** : Attendu une 422 mais l'api renvoie une 201 ce qui suppose que l'on arréusi à add a line avec zero quantity.
 
 **Cause** : OrderAddLineInput:$quantity
 
-**Règle du module en jeu** : 
+**Règle du module en jeu** : L'idée est de mettre un Assert pour tapper dans la validation de surface.
 
-**Correctif** : Mettre un assert Positive
+**Correctif** : Mettre un assert Positive.
 
 ## testListingKitchenTicketsReturnsMine
 
