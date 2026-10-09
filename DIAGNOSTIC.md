@@ -4,7 +4,7 @@ Une section par test en échec : renseignez ses quatre champs.
 
 ## testAddingALineToAnUnknownOrderIsNotFound
 
-**Symptôme** :
+**Symptôme** : 
 
 **Cause** :
 
@@ -84,13 +84,13 @@ Une section par test en échec : renseignez ses quatre champs.
 
 ## testRefreshingTwiceWithTheSameTokenIsUnauthorized
 
-**Symptôme** :
+**Symptôme** : Le test renvoit une 200 alors qu'il est attendu une 401.
 
-**Cause** :
+**Cause** : gesdinet_jwt_refresh_token.yaml:5(single_use).
 
-**Règle du module en jeu** :
+**Règle du module en jeu** : Il est souhaité d'avoir un refresh token à usage unique pour un soucis de sécurité pour éviter un que quelqu'un ai accès au refresh token de quelqu'un d'autre.
 
-**Correctif** :
+**Correctif** : dans le fichier mentionné dans la cause il faut passer le paramètre single_use à true.
 
 ## testRemovingALineFromSomeoneElsesOrderIsForbidden
 
