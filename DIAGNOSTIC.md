@@ -14,13 +14,13 @@ Une section par test en échec : renseignez ses quatre champs.
 
 ## testAddingALineToAPaidOrderIsAConflict
 
-**Symptôme** :
+**Symptôme** : Il est attendu une 409 conflit sur un order déjà payé si on tente d'y rajouter une ligne. Or le test reçoit bien une 201, ce qui suppose qu'on arrive à ajouter une ligne à un order.
 
-**Cause** :
+**Cause** : OrderService:115(méthode addLine)
 
-**Règle du module en jeu** :
+**Règle du module en jeu** : La méthode ne vérifie pas en premier le statut de l'order avant d'effectuer une quelconque opération/traitement dessus.
 
-**Correctif** :
+**Correctif** : On vérifie le statut de l'order pour voir s'il est déjà payé, auquel cas on throw(OrderAlreadyPaidException qui renvoit une 409 conflict) une exception pour sortir directement de la méthode.
 
 ## testAddingALineToMyOrder
 
