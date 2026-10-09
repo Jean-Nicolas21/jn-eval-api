@@ -6,7 +6,7 @@ Les consignes de l'évaluation sont sur la page
 ## Installation
 
 Installez [Docker Compose](https://docs.docker.com/compose/install/) (v2.10 ou plus), puis, à la
-racine du dépôt :
+racine du dépôtt :
 
 ```bash
 make start
