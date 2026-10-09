@@ -34,13 +34,13 @@ Une section par test en échec : renseignez ses quatre champs.
 
 ## testAddingALineWithAZeroQuantityIsUnprocessable
 
-**Symptôme** :
+**Symptôme** : Attendu un
 
-**Cause** :
+**Cause** : OrderAddLineInput:$quantity
 
-**Règle du module en jeu** :
+**Règle du module en jeu** : 
 
-**Correctif** :
+**Correctif** : Mettre un assert Positive
 
 ## testListingKitchenTicketsReturnsMine
 
